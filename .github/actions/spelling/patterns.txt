@@ -1,0 +1,7 @@
+# Google Docs
+/docs\.google\.com/[a-z]+/d/(?:e/|)[0-9a-zA-Z_-]+/
+# sha-
+"[0-9a-f]{8}"
+"[0-9a-f]{64}"
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#|\%23)[0-9a-fA-FgGrR]{2,}[uU]?[lL]{0,2}\b

@@ -1,0 +1,17 @@
+^\.github/actions/spelling/
+^third_party/
+^vendor/
+(?:^|/)go\.(?:sum|mod)$
+(?:^|/)OWNERS(?:_ALIASES|)$
+\.ai$
+\.eps$
+\.gitattributes$
+\.ico$
+\.jar$
+\.jpg$
+\.lock$
+\.pdf$
+\.png$
+\.svg$
+\.zip$
+ignore$
