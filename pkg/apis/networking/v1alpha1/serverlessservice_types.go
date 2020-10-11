@@ -132,9 +132,9 @@ const (
 	// configured and it has a load balancer address.
 	ServerlessServiceConditionReady = apis.ConditionReady
 
-	// ServerlessServiceConditionEndspointsPopulated is set when the ServerlessService's underlying
+	// ServerlessServiceConditionEndpointsPopulated is set when the ServerlessService's underlying
 	// Revision K8s Service has been populated with endpoints.
-	ServerlessServiceConditionEndspointsPopulated apis.ConditionType = "EndpointsPopulated"
+	ServerlessServiceConditionEndpointsPopulated apis.ConditionType = "EndpointsPopulated"
 
 	// ActivatorEndpointsPopulated is an informational status that reports
 	// when the revision is backed by activator points. This might happen even if

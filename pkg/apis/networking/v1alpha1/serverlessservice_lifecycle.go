@@ -26,7 +26,7 @@ import (
 )
 
 var serverlessServiceCondSet = apis.NewLivingConditionSet(
-	ServerlessServiceConditionEndspointsPopulated,
+	ServerlessServiceConditionEndpointsPopulated,
 )
 
 // GetConditionSet retrieves the condition set for this resource. Implements the KRShaped interface.
@@ -51,13 +51,13 @@ func (sss *ServerlessServiceStatus) InitializeConditions() {
 
 // MarkEndpointsReady marks the ServerlessServiceStatus endpoints populated condition to true.
 func (sss *ServerlessServiceStatus) MarkEndpointsReady() {
-	serverlessServiceCondSet.Manage(sss).MarkTrue(ServerlessServiceConditionEndspointsPopulated)
+	serverlessServiceCondSet.Manage(sss).MarkTrue(ServerlessServiceConditionEndpointsPopulated)
 }
 
 // MarkEndpointsNotOwned marks that we don't own K8s service.
 func (sss *ServerlessServiceStatus) MarkEndpointsNotOwned(kind, name string) {
 	serverlessServiceCondSet.Manage(sss).MarkFalse(
-		ServerlessServiceConditionEndspointsPopulated, "NotOwned",
+		ServerlessServiceConditionEndpointsPopulated, "NotOwned",
 		"Resource %s of type %s is not owned by SKS", name, kind)
 }
 
@@ -86,7 +86,7 @@ func (sss *ServerlessServiceStatus) MarkActivatorEndpointsRemoved() {
 // MarkEndpointsNotReady marks the ServerlessServiceStatus endpoints populated condition to unknown.
 func (sss *ServerlessServiceStatus) MarkEndpointsNotReady(reason string) {
 	serverlessServiceCondSet.Manage(sss).MarkUnknown(
-		ServerlessServiceConditionEndspointsPopulated, reason,
+		ServerlessServiceConditionEndpointsPopulated, reason,
 		"K8s Service is not ready")
 }
 
