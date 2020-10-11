@@ -185,7 +185,7 @@ type IngressRule struct {
 type HTTPIngressRuleValue struct {
 	// A collection of paths that map requests to backends.
 	//
-	// If they are multiple matching paths, the first match takes precendent.
+	// If they are multiple matching paths, the first match takes precedent.
 	Paths []HTTPIngressPath `json:"paths"`
 
 	// TODO: Consider adding fields for ingress-type specific global
